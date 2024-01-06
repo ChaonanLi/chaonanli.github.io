@@ -1,0 +1,9 @@
+#docContent {
+    width: 100%;
+    height: 100vh;
+    border: none;
+}
+.active {
+    background-color: #009688;
+    color: #fff !important;
+}
