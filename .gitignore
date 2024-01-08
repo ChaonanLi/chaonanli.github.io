@@ -1,3 +1,4 @@
 .ipynb_checkpoints
 dev
-*.ipynb
+test
+.DS_Store
