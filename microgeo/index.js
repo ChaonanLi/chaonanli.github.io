@@ -39,6 +39,7 @@ layui.use(['element', 'layer', 'util'], function () {
                 };
             });
             if (isShow) {
+                $('.layui-side.layui-bg-black').attr('lay-status', 'hide');
                 $('.layui-side.layui-bg-black').width(60); 
                 $('.layui-logo').width(60);
                 $('.kit-side-fold i').css('margin-right', '70%'); 
@@ -50,6 +51,7 @@ layui.use(['element', 'layer', 'util'], function () {
                 $('#toggle').addClass('layui-icon-spread-left')
                 isShow = false;
             } else {
+                $('.layui-side.layui-bg-black').attr('lay-status', 'display');
                 $('.layui-side.layui-bg-black').width(200);
                 $('.layui-logo').width(200);
                 $('.kit-side-fold i').css('margin-right', '10%');
@@ -61,7 +63,7 @@ layui.use(['element', 'layer', 'util'], function () {
                 $('#toggle').removeClass('layui-icon-spread-left')
                 isShow = true;
             };
-            layer.msg('展开左侧菜单的操作', { icon: 0 });
+            // layer.msg('展开左侧菜单的操作', { icon: 0 });
         },
         menuRight: function () {  
             layer.open({
@@ -141,12 +143,16 @@ layui.use(['element', 'layer', 'util'], function () {
 
     $('#docListContainer').on('mouseover', '.doc-link', function () {
         var title = $(this).attr('data-title');
-        layer.tips(title, this, {
-            tips: [2, "rgb(47, 54, 60)"], // tips 参数用于调整提示框的位置和颜色
-            time: 0,
-            area: ['auto', 'auto'],
-        });
-    })
+        var sidebarStatus = $('.layui-side.layui-bg-black').attr('lay-status');
+        if (sidebarStatus === 'display'){
+            layer.tips(title, this, {
+                tips: [2, "rgb(47, 54, 60)"],
+                time: 0,
+                area: ['auto', 'auto'],
+                offset: 'auto' 
+            });
+        }
+    });
     $('#docListContainer').on('mouseout', '.doc-link', function () {
         layer.closeAll()
     })
@@ -172,12 +178,25 @@ layui.use(['element', 'layer', 'util'], function () {
 
     // 定义函数，绑定增加和切换tab的事件
     var tabFunction = {
-        tabAdd: function (url, id, name) { // 新增tab url 页面地址 id 对应data-id name标题
+        tabAdd: function (url, id, name) {
+            // Show loading overlay
+            var loadingIndex = layer.load(2, {shade: [0.3, '#000']});
+        
+            // Add tab with loading content
             element.tabAdd('tables', {
                 title: `<i class="layui-icon layui-icon-circle-dot" style="black"></i> ${name}`,
-                content: '<iframe data-frameid="' + id + '" scrolling="auto" frameborder="0" src="' + url + '" style="width:100%;height:800px"></iframe>',
+                content: '<div class="loading-wrapper" style="position:relative;"><iframe data-frameid="' + id + '" scrolling="auto" frameborder="0" src="' + url + '" style="width:100%;height:800px"></iframe></div>',
                 id: id
             });
+        
+            // Get the iframe element
+            var iframe = $('iframe[data-frameid="' + id + '"]')[0];
+        
+            // Attach load event to the iframe
+            iframe.onload = function () {
+                // Hide loading overlay after content is loaded
+                layer.close(loadingIndex);
+            };
         },
         tabChange: function (id) { // 根据id切换tab
             element.tabChange('tables', id);
