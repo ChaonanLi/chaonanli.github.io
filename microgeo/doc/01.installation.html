@@ -7516,6 +7516,7 @@ a.anchor-link {
 <th>Operate system</th>
 <th>Architecture</th>
 <th>R version</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -7526,6 +7527,7 @@ a.anchor-link {
 <td>Windows 10</td>
 <td>x86</td>
 <td>4.3.2</td>
+<td>Very well!</td>
 </tr>
 <tr>
 <td>AMD 5700G</td>
@@ -7534,6 +7536,7 @@ a.anchor-link {
 <td>Windows 11</td>
 <td>x86</td>
 <td>4.3.2</td>
+<td>Very well!</td>
 </tr>
 <tr>
 <td>Intel Core i5-5350U</td>
@@ -7542,6 +7545,7 @@ a.anchor-link {
 <td>macOS 12.7.2</td>
 <td>x86</td>
 <td>4.3.2</td>
+<td>Very well!</td>
 </tr>
 <tr>
 <td>Apple M2 Pro</td>
@@ -7550,6 +7554,7 @@ a.anchor-link {
 <td>macOS 14.0</td>
 <td>arm</td>
 <td>4.3.2</td>
+<td>The <code>get_modis_*_metrics()</code> runs very slowly because of the <code>terra::mosaic()</code>.</td>
 </tr>
 <tr>
 <td>Apple M2</td>
@@ -7558,6 +7563,7 @@ a.anchor-link {
 <td>macOS 13.5.2</td>
 <td>arm</td>
 <td>4.3.2</td>
+<td>The <code>get_modis_*_metrics()</code> runs very slowly because of the <code>terra::mosaic()</code>.</td>
 </tr>
 <tr>
 <td>AMD EPYC 7Y43</td>
@@ -7566,6 +7572,7 @@ a.anchor-link {
 <td>Ubuntu 18.04</td>
 <td>x86</td>
 <td>4.1.0 to 4.3.2</td>
+<td>Very well!</td>
 </tr>
 <tr>
 <td>AMD EPYC 7Y43</td>
@@ -7574,6 +7581,7 @@ a.anchor-link {
 <td>Ubuntu 20.04</td>
 <td>x86</td>
 <td>4.1.0 to 4.3.2</td>
+<td>Very well!</td>
 </tr>
 <tr>
 <td>AMD EPYC 7Y43</td>
@@ -7582,6 +7590,7 @@ a.anchor-link {
 <td>Ubuntu 22.04</td>
 <td>x86</td>
 <td>4.1.0 to 4.3.2</td>
+<td>Very well!</td>
 </tr>
 </tbody>
 </table>
@@ -7647,7 +7656,7 @@ a.anchor-link {
 </pre></div>
 <p>Then, we need to install the <code>Homebrew</code> if it is not avaliable on your Mac. Just run the following codes in your terminal. This step may take a few minutes, especially for the old versions of Mac.</p>
 <div class="highlight"><pre><span></span><span class="c1"># Install `Homebrew`</span>
-/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">"</span>
+/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="c1"># you may need to add `185.199.110.133 raw.githubusercontent.com` to `/etc/hosts`</span>
 
 <span class="c1"># Configure `Homebrew` if the `brew` command is not avaliable in your therminal</span>
 <span class="c1"># The path of `brew` may be not the `/opt/homebrew/bin` in your Mac! Run `dirname $(which brew)` to find the correct path </span>
@@ -7675,9 +7684,9 @@ brew<span class="w"> </span>update
 </pre></div>
 <p>Now, we can use <code>Homebrew</code> to install the system libraries required by <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R packages. Just run the following codes.</p>
 <div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>geos
-brew<span class="w"> </span>install<span class="w"> </span>gdal
-brew<span class="w"> </span>install<span class="w"> </span>proj
-brew<span class="w"> </span>install<span class="w"> </span>pkg-config
+<span class="c1"># brew install gdal</span>
+<span class="c1"># brew install proj</span>
+<span class="c1"># brew install pkg-config</span>
 </pre></div>
 </div>
 </div>

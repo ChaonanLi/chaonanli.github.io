@@ -7503,7 +7503,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>To make the acquisition of geographic map more convinient, we provide three functions to read map data from online repositories or a local file. The <code>read_aliyun_map()</code> retrieves an area or multiple areas of China map from the <a href="http://datav.aliyun.com/portal/school/atlas/area_selector">DataV.GeoAtlas</a>. We just need to access the <a href="http://datav.aliyun.com/portal/school/atlas/area_selector">DataV.GeoAtlas</a> to query one or multiple adcodes, and then pass them as a parameter to <code>read_aliyun_map()</code>. This allows us to obtain a microgeo-compatible and reliable <code>SpatialPolygonsDataFrame</code>. The <code>read_gadm_map()</code> and <code>read_shp_map()</code> is designed to retrieve map data from the <a href="https://gadm.org">Global Administrative Areas (GADM)</a> and a local ESRI Shapefile, respectively, based on the <code>geodata::gadm()</code> and <code>rgdal::readOGR()</code>. These two functions are are capable of expanding the source of map data. By using these functions, we are able to retrieve a microgeo-compatible <code>SpatialPolygonsDataFrame</code> for any area in the world.</p>
+<p>To make the acquisition of geographic map more convinient, we provide three functions to read map data from online repositories or a local file. The <code>read_aliyun_map()</code> retrieves an area or multiple areas of China map from the <a href="http://datav.aliyun.com/portal/school/atlas/area_selector">DataV.GeoAtlas</a>. We just need to access the <a href="http://datav.aliyun.com/portal/school/atlas/area_selector">DataV.GeoAtlas</a> to query one or multiple adcodes, and then pass them as a parameter to <code>read_aliyun_map()</code>. This allows us to obtain a microgeo-compatible and reliable <code>SpatialPolygonsDataFrame</code>. The <code>read_gadm_map()</code> and <code>read_shp_map()</code> is designed to retrieve map data from the <a href="https://gadm.org">Global Administrative Areas (GADM)</a> and a local ESRI Shapefile, respectively, based on the <code>geodata::gadm()</code> and <code>terra::vect()</code>. These two functions are are capable of expanding the source of map data. By using these functions, we are able to retrieve a microgeo-compatible <code>SpatialPolygonsDataFrame</code> for any area in the world.</p>
 </div>
 </div>
 </div>
@@ -12580,7 +12580,7 @@ ctcM7eAAAAAASUVORK5CYII=" width="540"/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>If neither the <code>read_aliyun_map()</code> nor the <code>read_gadm_map()</code> meets your needs, there is another way to read map data for using the <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R package. We designed a function of <code>read_shp_map()</code> based on the <code>rgdal::readOGR()</code>, which reads a ESRI Shapefile from your local computer disk (the ESRI Shapefile must be provided by yourself). The <code>SpatialPolygonsDataFrame</code> returned by <code>read_shp_map()</code> should be processed by <code>trans_map_fmt()</code> to convert the non-standardized <code>SpatialPolygonsDataFrame</code> to a microgeo-compatible one.</p>
+<p>If neither the <code>read_aliyun_map()</code> nor the <code>read_gadm_map()</code> meets your needs, there is another way to read map data for using the <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R package. We designed a function of <code>read_shp_map()</code> based on the <code>terra::vect()</code>, which reads a ESRI Shapefile from your local computer disk (the ESRI Shapefile must be provided by yourself). The <code>SpatialPolygonsDataFrame</code> returned by <code>read_shp_map()</code> should be processed by <code>trans_map_fmt()</code> to convert the non-standardized <code>SpatialPolygonsDataFrame</code> to a microgeo-compatible one.</p>
 </div>
 </div>
 </div>
@@ -12625,12 +12625,12 @@ ctcM7eAAAAAASUVORK5CYII=" width="540"/>
 <tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">0</th><td> 54.4821</td><td>  6</td><td>  5</td><td>黑龙江省        </td><td>Heilongjiang Sheng   </td><td>NA</td><td>黑龙江省        </td><td> 70.1328</td><td>CHN</td></tr>
-<tr><th scope="row">1</th><td>129.0670</td><td>  7</td><td>  6</td><td>内蒙古自治区    </td><td>Neimongol Zizhiqu    </td><td>NA</td><td>内蒙古自治区    </td><td>133.9940</td><td>CHN</td></tr>
-<tr><th scope="row">2</th><td>175.0860</td><td> 23</td><td> 26</td><td>新疆维吾尔自治区</td><td>Xinjianguygur Zizhiqu</td><td>NA</td><td>新疆维吾尔自治区</td><td> 86.0871</td><td>CHN</td></tr>
-<tr><th scope="row">3</th><td> 21.3066</td><td> 54</td><td> 59</td><td>吉林省          </td><td>Jilin Sheng          </td><td>NA</td><td>吉林省          </td><td> 43.2982</td><td>CHN</td></tr>
-<tr><th scope="row">4</th><td> 15.5891</td><td>107</td><td>122</td><td>辽宁省          </td><td>Liaoning Sheng       </td><td>NA</td><td>辽宁省          </td><td> 40.6203</td><td>CHN</td></tr>
-<tr><th scope="row">5</th><td> 43.6061</td><td>124</td><td>140</td><td>甘肃省          </td><td>Gansu Sheng          </td><td>NA</td><td>甘肃省          </td><td> 81.9243</td><td>CHN</td></tr>
+<tr><th scope="row">1</th><td> 54.4821</td><td>  6</td><td>  5</td><td>黑龙江省        </td><td>Heilongjiang Sheng   </td><td>NA</td><td>黑龙江省        </td><td> 70.1328</td><td>CHN</td></tr>
+<tr><th scope="row">2</th><td>129.0670</td><td>  7</td><td>  6</td><td>内蒙古自治区    </td><td>Neimongol Zizhiqu    </td><td>NA</td><td>内蒙古自治区    </td><td>133.9940</td><td>CHN</td></tr>
+<tr><th scope="row">3</th><td>175.0860</td><td> 23</td><td> 26</td><td>新疆维吾尔自治区</td><td>Xinjianguygur Zizhiqu</td><td>NA</td><td>新疆维吾尔自治区</td><td> 86.0871</td><td>CHN</td></tr>
+<tr><th scope="row">4</th><td> 21.3066</td><td> 54</td><td> 59</td><td>吉林省          </td><td>Jilin Sheng          </td><td>NA</td><td>吉林省          </td><td> 43.2982</td><td>CHN</td></tr>
+<tr><th scope="row">5</th><td> 15.5891</td><td>107</td><td>122</td><td>辽宁省          </td><td>Liaoning Sheng       </td><td>NA</td><td>辽宁省          </td><td> 40.6203</td><td>CHN</td></tr>
+<tr><th scope="row">6</th><td> 43.6061</td><td>124</td><td>140</td><td>甘肃省          </td><td>Gansu Sheng          </td><td>NA</td><td>甘肃省          </td><td> 81.9243</td><td>CHN</td></tr>
 </tbody>
 </table>
 </div>
@@ -12667,9 +12667,9 @@ ctcM7eAAAAAASUVORK5CYII=" width="540"/>
 <tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">92</th><td> 69.3981</td><td> 412</td><td> 418</td><td>青海省    </td><td>Qinghai Sheng </td><td>NA</td><td>青海省    </td><td>63.5516</td><td>CHN</td></tr>
-<tr><th scope="row">220</th><td>114.2030</td><td> 725</td><td> 721</td><td>西藏自治区</td><td>Xizang Zizhiqu</td><td>NA</td><td>西藏自治区</td><td>78.2912</td><td>CHN</td></tr>
-<tr><th scope="row">265</th><td> 45.7347</td><td>1144</td><td>1138</td><td>四川省    </td><td>Sichuan Sheng </td><td>NA</td><td>四川省    </td><td>60.2137</td><td>CHN</td></tr>
+<tr><th scope="row">93</th><td> 69.3981</td><td> 412</td><td> 418</td><td>青海省    </td><td>Qinghai Sheng </td><td>NA</td><td>青海省    </td><td>63.5516</td><td>CHN</td></tr>
+<tr><th scope="row">221</th><td>114.2030</td><td> 725</td><td> 721</td><td>西藏自治区</td><td>Xizang Zizhiqu</td><td>NA</td><td>西藏自治区</td><td>78.2912</td><td>CHN</td></tr>
+<tr><th scope="row">266</th><td> 45.7347</td><td>1144</td><td>1138</td><td>四川省    </td><td>Sichuan Sheng </td><td>NA</td><td>四川省    </td><td>60.2137</td><td>CHN</td></tr>
 </tbody>
 </table>
 </div>
@@ -12706,9 +12706,9 @@ ctcM7eAAAAAASUVORK5CYII=" width="540"/>
 <tr><th></th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">92</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Qinghai Sheng </td><td> 96.03758</td><td>35.67091</td></tr>
-<tr><th scope="row">220</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Xizang Zizhiqu</td><td> 88.44232</td><td>31.49123</td></tr>
-<tr><th scope="row">265</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Sichuan Sheng </td><td>102.69251</td><td>30.62964</td></tr>
+<tr><th scope="row">93</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Qinghai Sheng </td><td> 96.03758</td><td>35.67091</td></tr>
+<tr><th scope="row">221</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Xizang Zizhiqu</td><td> 88.44232</td><td>31.49123</td></tr>
+<tr><th scope="row">266</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Sichuan Sheng </td><td>102.69251</td><td>30.62964</td></tr>
 </tbody>
 </table>
 </div>
@@ -13928,7 +13928,7 @@ SUVORK5CYII=" width="805.8"/>
 <tr><th></th><th scope="col">&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">0</th><td>2542298</td></tr>
+<tr><th scope="row">1</th><td>2542298</td></tr>
 </tbody>
 </table>
 </div>
@@ -13965,7 +13965,7 @@ SUVORK5CYII=" width="805.8"/>
 <tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">0</th><td>2542298</td><td>Qinghai-Tibet Plateau</td></tr>
+<tr><th scope="row">1</th><td>2542298</td><td>Qinghai-Tibet Plateau</td></tr>
 </tbody>
 </table>
 </div>
@@ -14002,7 +14002,7 @@ SUVORK5CYII=" width="805.8"/>
 <tr><th></th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">0</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Qinghai-Tibet Plateau</td><td>91.56316</td><td>33.54207</td></tr>
+<tr><th scope="row">1</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Qinghai-Tibet Plateau</td><td>91.56316</td><td>33.54207</td></tr>
 </tbody>
 </table>
 </div>
@@ -14987,9 +14987,9 @@ BwHxXBSudtEJgHYuJA5B25kgTrBsbGxsamELlo2NDRhswbKxsQGDLVg2NjZgsAXLxsYGDLZg
 <tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">92</th><td> 69.3981</td><td> 412</td><td> 418</td><td>青海省    </td><td>Qinghai Sheng </td><td>NA</td><td>青海省    </td><td>63.5516</td><td>CHN</td></tr>
-<tr><th scope="row">220</th><td>114.2030</td><td> 725</td><td> 721</td><td>西藏自治区</td><td>Xizang Zizhiqu</td><td>NA</td><td>西藏自治区</td><td>78.2912</td><td>CHN</td></tr>
-<tr><th scope="row">265</th><td> 45.7347</td><td>1144</td><td>1138</td><td>四川省    </td><td>Sichuan Sheng </td><td>NA</td><td>四川省    </td><td>60.2137</td><td>CHN</td></tr>
+<tr><th scope="row">93</th><td> 69.3981</td><td> 412</td><td> 418</td><td>青海省    </td><td>Qinghai Sheng </td><td>NA</td><td>青海省    </td><td>63.5516</td><td>CHN</td></tr>
+<tr><th scope="row">221</th><td>114.2030</td><td> 725</td><td> 721</td><td>西藏自治区</td><td>Xizang Zizhiqu</td><td>NA</td><td>西藏自治区</td><td>78.2912</td><td>CHN</td></tr>
+<tr><th scope="row">266</th><td> 45.7347</td><td>1144</td><td>1138</td><td>四川省    </td><td>Sichuan Sheng </td><td>NA</td><td>四川省    </td><td>60.2137</td><td>CHN</td></tr>
 </tbody>
 </table>
 </div>
@@ -15026,9 +15026,9 @@ BwHxXBSudtEJgHYuJA5B25kgTrBsbGxsamELlo2NDRhswbKxsQGDLVg2NjZgsAXLxsYGDLZg
 <tr><th></th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">92</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Qinghai Sheng </td><td> 96.03758</td><td>35.67091</td></tr>
-<tr><th scope="row">220</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Xizang Zizhiqu</td><td> 88.44232</td><td>31.49123</td></tr>
-<tr><th scope="row">265</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Sichuan Sheng </td><td>102.69251</td><td>30.62964</td></tr>
+<tr><th scope="row">93</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Qinghai Sheng </td><td> 96.03758</td><td>35.67091</td></tr>
+<tr><th scope="row">221</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Xizang Zizhiqu</td><td> 88.44232</td><td>31.49123</td></tr>
+<tr><th scope="row">266</th><td>Non.DataV.GeoAtlas</td><td>microgeo</td><td>Sichuan Sheng </td><td>102.69251</td><td>30.62964</td></tr>
 </tbody>
 </table>
 </div>
