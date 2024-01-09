@@ -109,7 +109,7 @@ layui.use(['element', 'layer', 'util'], function () {
             skin: 'layui-layer-molv', 
             area: ['600px', '400px'], //宽高
             content: `<p style="padding:24px; text-align: justify; font-family: 'Roboto', sans-serif;"> 
-            If you use microgeo for data processing and publication of a paper, please cite: <br><br> 
+            If you use the microgeo R package for data processing and publication of a paper, please cite: <br><br> 
             1. https://github.com/ChaonanLi/microgeo<br></br>
             2. https://gitee.com/bioape/microgeo<br></br><br>
             Many thanks!
@@ -123,7 +123,7 @@ layui.use(['element', 'layer', 'util'], function () {
             title: `<i class="layui-icon layui-icon-group" style="font-family: 'Roboto', sans-serif;"> About us</i>`,
             type: 1,
             skin: 'layui-layer-molv', 
-            area: ['600px', '400px'], //宽高
+            area: ['600px', '445px'], //宽高
             content: `
             <div style="padding:24px; text-align: justify;font-family: 'Roboto', sans-serif;">
                 <p style="text-align:justify; padding-bottom: 20px;">
@@ -137,6 +137,10 @@ layui.use(['element', 'layer', 'util'], function () {
                 <p style="text-align:justify; padding-bottom: 20px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
                     Liao, Haijun (廖海君) | lihj@mtc.edu.cn | <a href="https://rhs.mtc.edu.cn//" target="_blank">Engineering Research Center of Chuanxibei RHS Construction at Mianyang Normal University of Sichuan Province (绵阳师范学院川西北乡村人居环境建设工程研究中心)</a>
+                </p>
+                <p style="text-align:justify; padding-bottom: 20px;">
+                    <i class="layui-icon layui-icon-circle-dot"></i>
+                    Yao Minjie (姚敏杰) | yaomj@fafu.edu.cn | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">College of Resources and Environment, Fujian Agriculture and Forestry University (福建农林大学资源与环境学院)</a>
                 </p>
                 <p style="text-align:justify; padding-bottom: 20px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
@@ -236,4 +240,12 @@ layui.use(['element', 'layer', 'util'], function () {
             $('#welcome-page').addClass('layui-hide')
         }
     });
+
+    // 首页交互
+    $('#jupyter-download').on('mouseover', function(){
+        $(this).addClass('layui-btn-radius')
+    })
+    $('#jupyter-download').on('mouseout', function(){
+        $(this).removeClass('layui-btn-radius')
+    })
 });

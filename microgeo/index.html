@@ -100,31 +100,33 @@
                     <h1 style="text-align: center;font-weight:normal;color: rgb(207, 206, 205); padding-top: 1%;font-size: 2.5vw;font-family: 'Roboto', sans-serif;">
                         microgeo
                     </h1>
-                    <p style="text-align: center;font-weight:normal;color: rgb(207, 206, 205); padding-top: 0.2%; font-size: 1vw;font-weight: lighter; font-family: 'Roboto', sans-serif;">
+                    <p style="text-align: center;font-weight:normal;color: rgb(207, 206, 205); padding-top: 0.2%; font-size: 1.1vw;font-weight: lighter; font-family: 'Roboto', sans-serif;">
                         An R package rapidly visualizing the biogeographic traits of soil microbes onto maps
                     </p>
                     <div style="text-align: center;padding-top: 2%;">
-                        <button type="button" class="layui-btn layui-btn-primary" style="color: rgb(207, 206, 205);width: 12vw; height: 4vw;" onclick="window.open('https://github.com/ChaonanLi/microgeo')">
-                            <i class="layui-icon layui-icon-download-circle" style="font-size: 1.3vw;font-family: 'Roboto', sans-serif;"> DOWNLOAD</i>
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-lg" id="jupyter-download" style="color: rgb(207, 206, 205);height: 60px;" onclick="window.open('https://github.com/ChaonanLi/chaonanli.github.io/tree/main/microgeo/jupyter')">
+                            <i class="layui-icon layui-icon-download-circle" style="color: rgb(207, 206, 205);font-size: 150%;"> 
+                                <span style="font-family: 'Roboto', sans-serif;"> Jupyter Notebook</span>
+                            </i>
                         </button>
-                        <p style="color: rgb(207, 206, 205);padding-top: 0.5%;font-family: 'Roboto', sans-serif; font-size: 0.5vw;">Version: 0.1.1</p>
+                        <p style="color: rgb(207, 206, 205);padding-top: 0.5%;font-family: 'Roboto', sans-serif; font-size: 80%;">Version: 0.1.1</p>
                     </div>
                     <div style="text-align: center;padding-top: 1%;">
-                        <a type="button" class="layui-btn layui-btn-primary layui-btn-xs" style="color: rgb(207, 206, 205);" href="https://github.com/ChaonanLi/microgeo" target="_blank">
-                            <span style="font-size: 0.5vw;font-family: 'Roboto', sans-serif;">
-                                GitHub
-                            </span>
-                        </a>
-                        <a type="button" class="layui-btn layui-btn-primary layui-btn-xs" style="color: rgb(207, 206, 205);" href="https://gitee.com/bioape/microgeo" target="_blank">
-                            <span style="font-size: 0.5vw;font-family: 'Roboto', sans-serif;">
-                                Gitee
-                            </span>
-                        </a>
-                        <a type="button" class="layui-btn layui-btn-primary layui-btn-xs" style="color: rgb(207, 206, 205);">
-                            <i class="layui-icon layui-icon-add-circle" style="color: rgb(207, 206, 205);font-size: 0.5vw;">
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" style="color: rgb(207, 206, 205);" href="https://github.com/ChaonanLi/microgeo" target="_blank">
+                            <i class="layui-icon layui-icon-github" style="color: rgb(207, 206, 205);">
+                                <span style="font-family: 'Roboto', sans-serif;"> GitHub</span>
+                            </i>
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" style="color: rgb(207, 206, 205);" href="https://gitee.com/bioape/microgeo" target="_blank">
+                            <i class="layui-icon layui-icon-rate-solid" style="color: rgb(207, 206, 205);">
+                                <span style="font-family: 'Roboto', sans-serif;"> Gitee</span>
+                            </i>
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" style="color: rgb(207, 206, 205);">
+                            <i class="layui-icon layui-icon-add-circle" style="color: rgb(207, 206, 205);">
                                 <span style="font-family: 'Roboto', sans-serif;"> Ctrl + D add to the bookmarks</span>
                             </i>
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div class="layui-row layui-col-space15" style="padding: 10px;">
@@ -171,7 +173,7 @@
             <!-- 页面底部固定区域 -->
             <div class="layui-footer">
                 <span style="text-align: center;font-family: 'Roboto', sans-serif;">
-                    If you encounter any issues during usage, feel free to contact Chaonan Li (<a href="javascript:;" style="color: blue;">licn@mtc.edu.cn</a>) or Xiangzhen Li (<a href="javascript:;" style="color: blue">lixz@fafu.edu.cn</a>).</span>
+                    If you encounter any issues during usage, feel free to contact Li Chaonan (<a href="javascript:;" style="color: blue;">licn@mtc.edu.cn</a>) or Li Xiangzhen (<a href="javascript:;" style="color: blue">lixz@fafu.edu.cn</a>).</span>
             </div>
         </div>
         <script src="layui/layui.js"></script>
