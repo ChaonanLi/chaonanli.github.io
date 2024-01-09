@@ -7662,6 +7662,7 @@ a.anchor-link {
 <span class="c1"># The path of `brew` may be not the `/opt/homebrew/bin` in your Mac! Run `dirname $(which brew)` to find the correct path </span>
 <span class="nb">echo</span><span class="w"> </span><span class="s1">'export PATH="/opt/homebrew/bin:$PATH"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc<span class="w"> </span><span class="c1"># The default terminal is `zsh` rather than `bash` in the new version of Mac; Run `echo $SHELL` to check it</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s1">'export PATH="/opt/homebrew/bin:$PATH"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile<span class="w"> </span><span class="c1"># The default terminal is `bash` in the old version of Mac; Run `echo $SHELL` to check it</span>
+<span class="nb">source</span><span class="w"> </span>~/.zshrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bash_profile
 
 <span class="c1"># Check the version of `Homebrew`</span>
 brew<span class="w"> </span>--version
@@ -7684,10 +7685,8 @@ brew<span class="w"> </span>update
 </pre></div>
 <p>Now, we can use <code>Homebrew</code> to install the system libraries required by <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R packages. Just run the following codes.</p>
 <div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>geos
-<span class="c1"># brew install gdal</span>
-<span class="c1"># brew install proj</span>
-<span class="c1"># brew install pkg-config</span>
 </pre></div>
+<p>Please note that in MacOS, due to different system versions, additional system libraries may be required (such as <code>subversion</code>, <code>gdal</code>, <code>proj</code>, and <code>pkg-config</code>, etc.). Pay attention to the prompts during the installation process. If you encounter dependency installation failures due to missing library files, please use the <code>brew</code> command to install the required libraries before installing the dependencies of microgeo R package.</p>
 </div>
 </div>
 </div>
@@ -7804,7 +7803,7 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Since several dependent R packages are not avaliable on <code>CRAN</code>, there are a few additional steps to use the <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R package. Just run the following codes in your R console.</p>
+<p>Since several dependent R packages are not avaliable on <code>CRAN</code>, there are a few additional steps to use the <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R package. Just run the following codes in your R console. Sometimes, when installing packages in RStudio, you may encounter situations where certain library files cannot be found. In such cases, you can simply switch to your terminal to perform the installation.</p>
 </div>
 </div>
 </div>
