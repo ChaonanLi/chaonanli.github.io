@@ -132,7 +132,7 @@ layui.use(['element', 'layer', 'util'], function () {
                 </p>
                 <p style="text-align:justify; padding-bottom: 20px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
-                    Liu Chi (刘驰) | liuchi0426@126.com | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">College of Resources and Environment, Fujian Agriculture and Forestry University (福建农林大学资源与环境学院)</a>
+                    <a href="https://www.researchgate.net/profile/Xiangzhen-Li-2" target="_blank">Li, Xiangzhen (李香真)</a> | lixz@fafu.edu.cn | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">College of Resources and Environment, Fujian Agriculture and Forestry University (福建农林大学资源与环境学院)</a>
                 </p>
                 <p style="text-align:justify; padding-bottom: 20px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
@@ -140,11 +140,15 @@ layui.use(['element', 'layer', 'util'], function () {
                 </p>
                 <p style="text-align:justify; padding-bottom: 20px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
+                    Liu Chi (刘驰) | liuchi0426@126.com | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">College of Resources and Environment, Fujian Agriculture and Forestry University (福建农林大学资源与环境学院)</a>
+                </p>
+                <p style="text-align:justify; padding-bottom: 20px;">
+                    <i class="layui-icon layui-icon-circle-dot"></i>
                     Yao Minjie (姚敏杰) | yaomj@fafu.edu.cn | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">College of Resources and Environment, Fujian Agriculture and Forestry University (福建农林大学资源与环境学院)</a>
                 </p>
                 <p style="text-align:justify; padding-bottom: 20px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
-                    <a href="https://www.researchgate.net/profile/Xiangzhen-Li-2" target="_blank">Li, Xiangzhen (李香真)</a> | lixz@fafu.edu.cn | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">College of Resources and Environment, Fujian Agriculture and Forestry University (福建农林大学资源与环境学院)</a>
+                    <a href="https://www.researchgate.net/profile/Lin-Xu-62" target="_blank">Xu, Lin (徐琳)</a> | xulin_lxy@sicau.edu.cn | <a href="https://zdsys.mtc.edu.cn/" target="_blank">National Forestry and Grassland Administration Key Laboratory of Forest Resources Conservation and Ecological Safety on the Upper Reaches of the Yangtze River & Forestry Ecological Engineering in the Upper Reaches of the Yangtze River Key Laboratory of Sichuan Province, Sichuan Agricultural University</a>
                 </p>
             </div>`
           });
