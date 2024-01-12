@@ -154,7 +154,7 @@ options(repr.plot.width = 15.4, repr.plot.height = 8.02)
 
 # Download classification MODIS metrics of research region. 
 # Please provide correct username and password. Run `?get_modis_cla_metrics()` to see more details.
-dataset.dts %<>% get_modis_cla_metrics(username = "bioape.lichaonan", password = "Lichaonan@0905", out.dir = "test") 
+dataset.dts %<>% get_modis_cla_metrics(username = "username", password = "password", out.dir = "test") 
 
 # Mask the results by using grassland(10); Run `?get_modis_cla_metrics()` to see more details.
 options(repr.plot.width = 15.4, repr.plot.height = 8.02)
