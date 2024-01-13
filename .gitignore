@@ -1,5 +1,8 @@
 .ipynb_checkpoints
 dev
 test
+case
+jupyter.tar.gz
+html.tar.gz
 .DS_Store
 push
