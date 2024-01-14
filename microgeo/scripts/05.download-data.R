@@ -104,7 +104,7 @@ show_modis_num_metrics()
 # Please provide correct username and password. Run `?get_modis_num_metrics()` to see more details.
 dataset.dts.aliyun %<>% get_modis_num_metrics(username = "username", password = "password", 
                                               date.ran = c("2019-08-01|2019-09-01", "2020-08-01|2020-09-01"),
-                                              measures = c("NDVI", "EVI"), out.dir = "test")
+                                              measures = c("NDVI", "EVI"), out.dir = "test", nums.job = 12)
 
 # Show dataset 
 dataset.dts.aliyun %>% show_dataset()
