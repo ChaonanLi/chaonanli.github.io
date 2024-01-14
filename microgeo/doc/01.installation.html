@@ -7516,7 +7516,6 @@ a.anchor-link {
 <th>Operate system</th>
 <th>Architecture</th>
 <th>R version</th>
-<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -7527,7 +7526,6 @@ a.anchor-link {
 <td>Windows 10 (Virtual Machine)</td>
 <td>x86</td>
 <td>4.3.2</td>
-<td>Well done!</td>
 </tr>
 <tr>
 <td>AMD EPYC 7Y43</td>
@@ -7536,7 +7534,6 @@ a.anchor-link {
 <td>Windows 11 (Virtual Machine)</td>
 <td>x86</td>
 <td>4.3.2</td>
-<td>Well done!</td>
 </tr>
 <tr>
 <td>Intel Core i5-5350U</td>
@@ -7545,7 +7542,6 @@ a.anchor-link {
 <td>macOS 12.7.2</td>
 <td>x86</td>
 <td>4.3.2</td>
-<td>Well done!</td>
 </tr>
 <tr>
 <td>Apple M2 Pro</td>
@@ -7554,7 +7550,6 @@ a.anchor-link {
 <td>macOS 14.0</td>
 <td>arm</td>
 <td>4.3.2</td>
-<td>The <code>get_modis_*_metrics()</code> runs very slowly because of the <code>terra::mosaic()</code>.</td>
 </tr>
 <tr>
 <td>Apple M2</td>
@@ -7563,7 +7558,6 @@ a.anchor-link {
 <td>macOS 13.5.2</td>
 <td>arm</td>
 <td>4.3.2</td>
-<td>The <code>get_modis_*_metrics()</code> runs very slowly because of the <code>terra::mosaic()</code>.</td>
 </tr>
 <tr>
 <td>AMD EPYC 7Y43</td>
@@ -7572,7 +7566,6 @@ a.anchor-link {
 <td>Ubuntu 18.04</td>
 <td>x86</td>
 <td>4.1.0 to 4.3.2</td>
-<td>Well done!</td>
 </tr>
 <tr>
 <td>AMD EPYC 7Y43</td>
@@ -7581,7 +7574,6 @@ a.anchor-link {
 <td>Ubuntu 20.04</td>
 <td>x86</td>
 <td>4.1.0 to 4.3.2</td>
-<td>Well done!</td>
 </tr>
 <tr>
 <td>AMD EPYC 7Y43</td>
@@ -7590,7 +7582,6 @@ a.anchor-link {
 <td>Ubuntu 22.04</td>
 <td>x86</td>
 <td>4.1.0 to 4.3.2</td>
-<td>Well done!</td>
 </tr>
 </tbody>
 </table>
@@ -7639,27 +7630,59 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.2-Install-dependencies-on-MacOS%EF%BC%88ARM-and-x86%EF%BC%89">1.2 Install dependencies on MacOS（ARM and x86）<a class="anchor-link" href="#1.2-Install-dependencies-on-MacOS%EF%BC%88ARM-and-x86%EF%BC%89">¶</a></h3>
+<h3 id="1.2-Install-dependencies-on-macOS%EF%BC%88ARM-and-x86%EF%BC%89">1.2 Install dependencies on macOS（ARM and x86）<a class="anchor-link" href="#1.2-Install-dependencies-on-macOS%EF%BC%88ARM-and-x86%EF%BC%89">¶</a></h3>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1e80eac3-4c07-4f26-ab29-1fd0426752c0">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=77456840-bcac-4b4e-b546-5e56f2275b83">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The installation of <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R package on a MacOS requires <code>Xcode Command Line Tools</code> and several system libraries including <code>gdal</code>, <code>proj</code>, <code>pkg-config</code> and <code>geos</code>. The installation steps are as follows:</p>
-<p>First, we need to install the <code>Xcode Command Line Tools</code> if it is not avaliable on your Mac. Just run the following codes in your terminal, and install <code>Xcode Command Line Tools</code> according to the prompt in the pop-up window</p>
+<p>The installation of <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R package on a macOS requires <code>Xcode Command Line Tools</code> and several system libraries. We need to install the <code>Xcode Command Line Tools</code> if it is not avaliable on your Mac. Just run the following codes in your terminal, and install <code>Xcode Command Line Tools</code> according to the prompt in the pop-up window</p>
 <div class="highlight"><pre><span></span>xcode-select<span class="w"> </span>--install
 </pre></div>
-<p>Then, we need to install the <code>Homebrew</code> if it is not avaliable on your Mac. Just run the following codes in your terminal. This step may take a few minutes, especially for the old versions of Mac.</p>
-<div class="highlight"><pre><span></span><span class="c1"># Install `Homebrew`</span>
-/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="c1"># you may need to add `185.199.110.133 raw.githubusercontent.com` to `/etc/hosts`</span>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=42722822-7e78-4e96-8c84-308087621b89">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="1.2.1-Install-macOS-dependencies-using-Homebrew">1.2.1 Install macOS dependencies using <code>Homebrew</code><a class="anchor-link" href="#1.2.1-Install-macOS-dependencies-using-Homebrew">¶</a></h4>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f7192a01-f803-406c-a130-a978a63b96b2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Usually, we can use the <code>Homebrew</code> to install the dependencies of <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R package on a macOS. Firstly, we need to install the <code>Homebrew</code> if it is not avaliable on your Mac. Just run the following codes in your terminal. This step may take a few minutes, especially for the old versions of Mac.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2fe8b830-7bd4-4e3e-880e-c391b3a80508">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span><span class="c1"># Install the `Homebrew`</span>
+<span class="c1"># You may need to add `185.199.110.133 raw.githubusercontent.com` to `/etc/hosts` if the network can not connect to GitHub</span>
+/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">"</span><span class="w"> </span>
 
 <span class="c1"># Configure `Homebrew` if the `brew` command is not avaliable in your therminal</span>
-<span class="c1"># The path of `brew` may be not the `/opt/homebrew/bin` in your Mac! Run `dirname $(which brew)` to find the correct path </span>
+<span class="c1"># The path of `brew` may be not the `/opt/homebrew/bin` in your Mac! </span>
+<span class="c1"># Run `dirname $(which brew)` to find a correct path on your macOS</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s1">'export PATH="/opt/homebrew/bin:$PATH"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc<span class="w"> </span><span class="c1"># The default terminal is `zsh` rather than `bash` in the new version of Mac; Run `echo $SHELL` to check it</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s1">'export PATH="/opt/homebrew/bin:$PATH"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile<span class="w"> </span><span class="c1"># The default terminal is `bash` in the old version of Mac; Run `echo $SHELL` to check it</span>
 <span class="nb">source</span><span class="w"> </span>~/.zshrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bash_profile
@@ -7667,8 +7690,29 @@ a.anchor-link {
 <span class="c1"># Check the version of `Homebrew`</span>
 brew<span class="w"> </span>--version
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=edfb932c-94f2-45fc-af9a-a5cfb4f6c600">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Switching the <code>Homebrew</code> package manager to a mirror or source within the country is often done to improve download speeds and reduce latency for users. <code>Homebrew</code> relies on external servers to fetch and install software packages, and using a local mirror can significantly enhance the installation process by utilizing servers located within the country. This helps to mitigate slow download speeds that may occur when fetching packages from international servers, resulting in a more efficient and faster software installation experience for users. Here's a specific example tailored for users in Mainland China.</p>
-<div class="highlight"><pre><span></span><span class="c1"># Check the default mirror or source of `Homebrew`; The default may be `https://github.com/Homebrew/brew.git`</span>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=43ab451b-7976-4a80-b013-f7dfe27674ec">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span><span class="c1"># Check the default mirror or source of `Homebrew` </span>
+<span class="c1"># The default may be `https://github.com/Homebrew/brew.git`</span>
 <span class="nb">cd</span><span class="w"> </span><span class="s2">"</span><span class="k">$(</span>brew<span class="w"> </span>--repo<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>-v<span class="w"> </span>
 
 <span class="c1"># Switch the default mirror to the Aliyun mirror</span>
@@ -7683,8 +7727,102 @@ brew<span class="w"> </span>update
 <span class="c1"># Sometimes, you may need to exit and re-enter the terminal for changes to take effect.</span>
 <span class="c1"># Run `cd "$(brew --repo)" &amp;&amp; git remote -v` to check the changes before installing the system libraries using `brew`</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e474034c-998f-4797-a434-9be487f9a8f0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Now, we can use <code>Homebrew</code> to install the system libraries required by <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R packages. Just run the following codes.</p>
-<div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>geos
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1e80eac3-4c07-4f26-ab29-1fd0426752c0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>gdal
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7f57cf0d-30f0-4f66-aaac-08123f43bdd5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="1.2.2-Install-macOS-dependencies-using-MacPorts%EF%BC%88recommend%EF%BC%89">1.2.2 Install macOS dependencies using <code>MacPorts</code>（<strong>recommend</strong>）<a class="anchor-link" href="#1.2.2-Install-macOS-dependencies-using-MacPorts%EF%BC%88recommend%EF%BC%89">¶</a></h4>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ed24599f-ee0b-48c8-9f35-3710ecc8e64b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>We also can use the <a href="https://github.com/macports/macports-base/releases/tag/v2.8.1">MacPorts</a> to install the system libraries required by <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R packages on a macOS. Please note that you must install a correct <code>MacPorts</code> version according to the version of your macOS. For example, I have a MacBook Pro with a macOS Sonoma v14.0, thus I need to install the <code>MacPorts-2.8.1-14-Sonoma.pkg</code>. Once the installation package is successfully downloaded, you only need to follow the installation wizard to complete the installation. <strong>Please note: Remember to disconnect the network before installing, otherwise the installation process will be very, very slow！</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1905f391-9991-44cf-b517-bb8d91ec1d2a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="RTools" src="../img/macports-install.png"/></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0353d246-1d61-409c-a49e-7e65cdbe22f5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>After successfully installing <code>MacPorts</code>, we need to add it to the system's environment variables. Otherwise, the <code>port</code> command can not be found in the terminal. Just run the following codes in your termal.</p>
+<div class="highlight"><pre><span></span>dirname<span class="w"> </span><span class="k">$(</span>which<span class="w"> </span>port<span class="k">)</span><span class="w"> </span><span class="c1"># Find the location of `port` command in your macOS. It may be `/opt/local/bin`</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">'export PATH="/opt/local/bin:/opt/local/sbin:$PATH"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc<span class="w"> </span><span class="c1"># The default terminal is `zsh` rather than `bash` in the new version of Mac; Run `echo $SHELL` to check it</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">'export PATH="/opt/local/bin:/opt/local/sbin:$PATH"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile<span class="w"> </span><span class="c1"># The default terminal is `bash` in the old version of Mac; Run `echo $SHELL` to check it</span>
+<span class="nb">source</span><span class="w"> </span>~/.zshrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bash_profile
+port<span class="w"> </span>version<span class="w"> </span><span class="c1"># check the version of `MacPorts`</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b1f80e1a-ec08-4693-bb9b-900d6b9c7824">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Now we can use the <code>MacPorts</code> to install system libraries required by <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R packages on a macOS. Just run the following codes in your termal.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ea43bef6-3163-47ad-ab17-aad6c1a5e865">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span>sudo<span class="w"> </span>port<span class="w"> </span>selfupdate
+sudo<span class="w"> </span>port<span class="w"> </span>install<span class="w"> </span>gdal<span class="w"> </span>+hdf4<span class="w"> </span>+hdf5<span class="w"> </span>+netcdf
 </pre></div>
 </div>
 </div>
@@ -7696,7 +7834,7 @@ brew<span class="w"> </span>update
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Please note that in MacOS, due to different system versions, additional system libraries may be required (such as <code>subversion</code>, <code>gdal</code>, <code>proj</code>, and <code>pkg-config</code>, etc.). Pay attention to the prompts during the installation process. If you encounter dependency installation failures due to missing library files, please use the <code>brew</code> command to install the required libraries before installing the dependencies of microgeo R package.</p>
+<p>Please note that in macOS, due to different system versions, additional system libraries may be required (such as <code>subversion</code>, <code>proj</code>, <code>geos</code> and <code>pkg-config</code>, etc.). Pay attention to the prompts during the installation process. If you encounter dependency installation failures due to missing library files, please use the <code>brew</code> or <code>port</code> (recommend) command to install the required libraries before installing the dependencies of <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R packages.</p>
 </div>
 </div>
 </div>
@@ -7718,10 +7856,54 @@ brew<span class="w"> </span>update
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The installation of <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R package on an Ubuntu OS may require several libraries including <code>libgeos-dev, libgdal-dev, libudunits2-dev, uuid-dev, libharfbuzz-dev, libfribidi-dev, libv8-dev, cmake and libgit2-dev.</code> Just run the following codes in your terminal to install them.</p>
+<p>The installation of <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R package on an Ubuntu OS may require several libraries including <code>libgeos-dev, libgdal-dev, libudunits2-dev, uuid-dev, libharfbuzz-dev, libfribidi-dev, libv8-dev, cmake, libgit2-dev and gdal-bin.</code> Just run the following codes in your terminal to install them.</p>
 <div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libgeos-dev<span class="w"> </span>libgdal-dev<span class="w"> </span>libudunits2-dev<span class="w"> </span>uuid-dev<span class="w"> </span>libharfbuzz-dev<span class="w"> </span>libfribidi-dev<span class="w"> </span>libv8-dev<span class="w"> </span>cmake<span class="w"> </span>libgit2-dev
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libgeos-dev<span class="w"> </span>libgdal-dev<span class="w"> </span>libudunits2-dev<span class="w"> </span>uuid-dev<span class="w"> </span>libharfbuzz-dev<span class="w"> </span>libfribidi-dev<span class="w"> </span>libv8-dev<span class="w"> </span>cmake<span class="w"> </span>libgit2-dev<span class="w"> </span>gdal-bin
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2e6447f0-e266-4b4a-a7d9-368d27dba563">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="1.4-Check-the-capcibility-of-GDAL-(macOS-and-Ubuntu)">1.4 Check the capcibility of <code>GDAL</code> (macOS and Ubuntu)<a class="anchor-link" href="#1.4-Check-the-capcibility-of-GDAL-(macOS-and-Ubuntu)">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=85974b44-ffc1-4145-8afc-276bf6885361">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>For Linux (tested only on Ubuntu 18.04，20.04 and 22.04) and macOS operating systems, using the <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R packages also requires the <code>GDAL version 3.4.1</code> or above. You can check the current GDAL version on your system by using the command <code>gdalinfo --version</code>. <strong>More importantly, the GDAL installed on your system needs to support both HDF4 and HDF5. You can check if the current version of GDAL meets this requirement by using the command <code>gdalinfo --formats | grep HDF</code></strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2244521f-2f03-4b13-a683-a451348cedbe">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="RTools" src="../img/gdal-supports.png"/></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ffa2c1d5-845a-4d62-9a0b-5abf6cf47276">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>After our testing, the GDAL installed using <code>brew</code> on macOS does not by default support HDF4, resulting in errors when processing remote sensing images. This is why we recommend users to install the system dependencies required for the <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R packages using <code>MacPorts</code>.</p>
 </div>
 </div>
 </div>
@@ -7829,6 +8011,17 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 <span class="nf">source</span><span class="p">(</span><span class="nf">system.file</span><span class="p">(</span><span class="s">"scripts"</span><span class="p">,</span><span class="w"> </span><span class="s">"install-extra-pkgs.R"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"microgeo"</span><span class="p">))</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9a016082-4f65-4694-9bed-eb87ca1f1e3e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Having successfully installed the <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R package, we can now delve into using it to create geographic maps. However, it is important to note that several functions may require significant computational resources. Personal computers might not meet the computational demands, so we recommend users to utilize these functions from the <a href="https://github.com/ChaonanLi/microgeo">microgeo</a> R package on a workstation or server.</p>
 </div>
 </div>
 </div>
