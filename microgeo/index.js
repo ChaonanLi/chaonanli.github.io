@@ -107,48 +107,53 @@ layui.use(['element', 'layer', 'util'], function () {
             title: `<i class="layui-icon layui-icon-tips" style="font-family: 'Roboto', sans-serif;"> Citation</i>`,
             type: 1,
             skin: 'layui-layer-molv', 
-            area: ['600px', '400px'], //宽高
+            area: ['600px', '280px'], //宽高
             content: `<p style="padding:24px; text-align: justify; font-family: 'Roboto', sans-serif;"> 
-            If you use the microgeo R package for data processing and publication of a paper, please cite: <br><br> 
-            1. https://github.com/ChaonanLi/microgeo<br></br>
-            2. https://gitee.com/bioape/microgeo<br></br><br>
+            If you use the microgeo R package for data processing and publication, please cite it as follows: <br><br> 
+            Chaonan Li, Chi Liu, Hankang Li, Haijun Liao, Lin Xu, Minjie Yao, Xiangzhen Li. The microgeo: an R package rapidly displays
+            the biogeography of soil microbial community traits on maps. <em>FEMS Microbiology Ecology</em>, 2024, 97,
+            fiae087 (<a href="https://doi.org/10.1093/femsec/fiae087" target="_blank" style="color:blue">https://doi.org/10.1093/femsec/fiae087</a>).<br><br> 
             Many thanks!
             </p>`
           });
     })
-
+    
     // About us
     $('#about_us').on('click', function(){
         layer.open({
             title: `<i class="layui-icon layui-icon-group" style="font-family: 'Roboto', sans-serif;"> About us</i>`,
             type: 1,
             skin: 'layui-layer-molv', 
-            area: ['600px', '445px'], //宽高
+            area: ['800px', '544px'], //宽高
             content: `
-            <div style="padding:24px; text-align: justify;font-family: 'Roboto', sans-serif;">
-                <p style="text-align:justify; padding-bottom: 20px;">
+            <div style="padding:18px; text-align: justify;font-family: 'Roboto', sans-serif;">
+                <p style="text-align:justify; padding-bottom: 15px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
-                    <a href="https://www.researchgate.net/profile/Chaonan-Li-5" target="_blank">Li, Chaonan (李超男)</a> | licn@mtc.edu.cn | <a href="https://zdsys.mtc.edu.cn/" target="_blank">Ecological Security and Protection Key Laboratory of Sichuan Province, Mianyang Normal University (绵阳师范学院生态安全与保护四川省重点实验室)</a>
+                    <a href="https://www.researchgate.net/profile/Chaonan-Li-5" target="_blank" style="font-weight:bold">Chaonan Li</a> | licn@mtc.edu.cn | <a href="https://zdsys.mtc.edu.cn/" target="_blank">Ecological Security and Protection Key Laboratory of Sichuan Province, Mianyang Normal University, Mianyang 621000, China</a>
                 </p>
                 <p style="text-align:justify; padding-bottom: 20px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
-                    <a href="https://www.researchgate.net/profile/Xiangzhen-Li-2" target="_blank">Li, Xiangzhen (李香真)</a> | lixz@fafu.edu.cn | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">College of Resources and Environment, Fujian Agriculture and Forestry University (福建农林大学资源与环境学院)</a>
+                    <span style="font-weight:bold">Chi Liu</span> | liuchi0426@126.com | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">Engineering Research Center of Soil Remediation of Fujian Province University, College of Resources and Environment, Fujian Agriculture and Forestry University, Fuzhou 350002, China</a>
                 </p>
                 <p style="text-align:justify; padding-bottom: 20px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
-                    Liao, Haijun (廖海君) | lihj@mtc.edu.cn | <a href="https://rhs.mtc.edu.cn//" target="_blank">Engineering Research Center of Chuanxibei RHS Construction at Mianyang Normal University of Sichuan Province (绵阳师范学院川西北乡村人居环境建设工程研究中心)</a>
+                    <span style="font-weight:bold">Hankang Li</span> | hankang201222@gmail.com | Department of Electrical Engineering and Computer Science, University of California, Irvine, CA 92697, USA
                 </p>
                 <p style="text-align:justify; padding-bottom: 20px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
-                    Liu Chi (刘驰) | liuchi0426@126.com | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">College of Resources and Environment, Fujian Agriculture and Forestry University (福建农林大学资源与环境学院)</a>
+                    <span style="font-weight:bold">Haijun, Liao</span> | lihj@mtc.edu.cn | <a href="https://rhs.mtc.edu.cn//" target="_blank">Engineering Research Center of Chuanxibei RHS Construction at Mianyang Normal University of Sichuan Province, Mianyang Normal University, Mianyang 621000, China</a>
                 </p>
                 <p style="text-align:justify; padding-bottom: 20px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
-                    Yao Minjie (姚敏杰) | yaomj@fafu.edu.cn | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">College of Resources and Environment, Fujian Agriculture and Forestry University (福建农林大学资源与环境学院)</a>
+                    <a href="https://www.researchgate.net/profile/Lin-Xu-62" target="_blank" style="font-weight:bold">Lin, Xu</a> | xulin_lxy@sicau.edu.cn | National Forestry and Grassland Administration Key Laboratory of Forest Resources Conservation and Ecological Safety on the Upper Reaches of the Yangtze River & Forestry Ecological Engineering in the Upper Reaches of the Yangtze River Key Laboratory of Sichuan Province, Sichuan Agricultural University, Chengdu, 611130, China
                 </p>
                 <p style="text-align:justify; padding-bottom: 20px;">
                     <i class="layui-icon layui-icon-circle-dot"></i>
-                    <a href="https://www.researchgate.net/profile/Lin-Xu-62" target="_blank">Xu, Lin (徐琳)</a> | xulin_lxy@sicau.edu.cn | <a href="https://zdsys.mtc.edu.cn/" target="_blank">National Forestry and Grassland Administration Key Laboratory of Forest Resources Conservation and Ecological Safety on the Upper Reaches of the Yangtze River & Forestry Ecological Engineering in the Upper Reaches of the Yangtze River Key Laboratory of Sichuan Province, Sichuan Agricultural University</a>
+                    <span style="font-weight:bold">Minjie, Yao</span> | yaomj@fafu.edu.cn | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">Engineering Research Center of Soil Remediation of Fujian Province University, College of Resources and Environment, Fujian Agriculture and Forestry University, Fuzhou 350002, China</a>
+                </p>
+                <p style="text-align:justify; padding-bottom: 20px;">
+                    <i class="layui-icon layui-icon-circle-dot"></i>
+                    <a href="https://www.researchgate.net/profile/Xiangzhen-Li-2" target="_blank" style="font-weight:bold">Xiangzhen, Li</a> | lixz@fafu.edu.cn | <a href="https://zhxy.fafu.edu.cn/main.htm" target="_blank">Engineering Research Center of Soil Remediation of Fujian Province University, College of Resources and Environment, Fujian Agriculture and Forestry University, Fuzhou 350002, China</a>
                 </p>
             </div>`
           });
