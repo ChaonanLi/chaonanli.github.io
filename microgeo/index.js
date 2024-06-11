@@ -109,7 +109,11 @@ layui.use(['element', 'layer', 'util'], function () {
             skin: 'layui-layer-molv', 
             area: ['600px', '280px'], //宽高
             content: `<p style="padding:24px; text-align: justify; font-family: 'Roboto', sans-serif;"> 
-
+            If you use the microgeo R package for data processing and publication, please cite it as follows: <br><br> 
+            Chaonan Li, Chi Liu, Hankang Li, Haijun Liao, Lin Xu, Minjie Yao, Xiangzhen Li. The microgeo: an R package rapidly displays
+            the biogeography of soil microbial community traits on maps. <em>FEMS Microbiology Ecology</em>, 2024, 97,
+            fiae087 (<a href="https://doi.org/10.1093/femsec/fiae087" target="_blank" style="color:blue">https://doi.org/10.1093/femsec/fiae087</a>).<br><br> 
+            Many thanks!
             </p>`
           });
     })
